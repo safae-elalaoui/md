@@ -643,3 +643,14 @@ button { cursor: pointer; border: none; background: none; }
   .stats-container { grid-template-columns: repeat(2, 1fr); }
   .instagram-grid { grid-template-columns: 1fr; }
 }
+
+@media (max-width: 480px) {
+  .hero-name { font-size: 2.5rem; }
+  .stat-num { font-size: 2.4rem; }
+  .stats-container { grid-template-columns: 1fr; gap: 20px; }
+  .section { padding: 60px 0; }
+  .contact-form { padding: 24px 20px; }
+  .skills-bars { padding: 0 10px; }
+  .hero-actions { flex-direction: column; width: 100%; }
+  .hero-actions .btn { width: 100%; justify-content: center; }
+}
