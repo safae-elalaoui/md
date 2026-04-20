@@ -794,7 +794,7 @@ button {
   border-radius: var(--radius);
   padding: 28px 22px;
   position: relative;
-  overflow: hidden;
+  overflow: visible;
   transition: transform .5s cubic-bezier(.25, .46, .45, .94), box-shadow .5s ease, border-color .3s ease;
   cursor: default;
   animation: cascadeIn .6s ease both;
@@ -1858,15 +1858,16 @@ button {
   }
 
   .courses-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     gap: 14px;
   }
 
   .course-card {
-    flex-direction: row;
-    align-items: center;
-    gap: 16px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
     padding: 18px 16px;
+    overflow: visible;
   }
 
   .course-icon {
@@ -1903,6 +1904,24 @@ button {
 
   .course-card .course-text {
     min-width: 0;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+    gap: 10px;
+  }
+
+  .gallery-item:nth-child(1) {
+    grid-column: span 2;
+  }
+
+  .gallery-item {
+    height: 200px;
+  }
+
+  .gallery-item img {
+    height: 200px;
   }
 
   .formation-grid {
@@ -1987,12 +2006,13 @@ button {
   }
 
   .gallery-grid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
+    gap: 10px;
   }
 
   .gallery-item:nth-child(1) {
-    grid-column: span 1;
+    grid-column: span 2;
   }
 
   .gallery-item {
@@ -2117,11 +2137,11 @@ button {
   }
 
   .gallery-item {
-    height: 180px;
+    height: 160px;
   }
 
   .gallery-item img {
-    height: 180px;
+    height: 160px;
   }
 
   .about-img {
@@ -2144,21 +2164,22 @@ button {
   .course-card {
     flex-direction: row;
     align-items: flex-start;
-    gap: 14px;
-    padding: 16px 14px;
+    gap: 12px;
+    padding: 14px 12px;
+    overflow: visible;
   }
 
   .course-icon {
-    width: 44px;
-    height: 44px;
-    font-size: 1.3rem;
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
     border-radius: 10px;
     margin-bottom: 0;
     flex-shrink: 0;
   }
 
   .course-card h3 {
-    font-size: 1rem;
+    font-size: .95rem;
   }
 
   .interest-card {
